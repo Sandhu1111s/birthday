@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Surprise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="screen-landing" class="screen active">
+    <p class="eyebrow">psst… someone made this for you</p>
+    <h1>Hey <span class="name">Anchal</span></h1>
+    <p class="subtitle">There's a tiny surprise waiting. No pressure — just tap the box when you're ready.</p>
+    <button class="gift-box" id="open-gift" aria-label="Open gift">
+      <div class="box-lid"></div>
+      <div class="box-body">
+        <span class="ribbon-v"></span>
+        <span class="ribbon-h"></span>
+        <span class="bow">+</span>
+      </div>
+      <p class="tap-hint">tap to open</p>
+    </button>
+  </section>
+
+  <section id="screen-unwrap" class="screen">
+    <h2>Opening…</h2>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+  </section>
+
+  <section id="screen-cards" class="screen">
+    <h2>Pick a card</h2>
+    <p class="card-instruction">Each one has a note from a friend</p>
+    <div class="cards-grid">
+      <button class="wish-card" data-card="1">
+        <span class="card-emoji">1</span>
+        <span class="card-label">Card 1</span>
+      </button>
+      <button class="wish-card" data-card="2">
+        <span class="card-emoji">2</span>
+        <span class="card-label">Card 2</span>
+      </button>
+      <button class="wish-card" data-card="3">
+        <span class="card-emoji">3</span>
+        <span class="card-label">Card 3</span>
+      </button>
+      <button class="wish-card" data-card="4">
+        <span class="card-emoji">4</span>
+        <span class="card-label">Card 4</span>
+      </button>
+    </div>
+    <p class="cards-footer" id="cards-progress">0 / 4 opened</p>
+  </section>
+
+  <dialog id="card-modal" class="card-modal">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-emoji" id="modal-emoji"></div>
+    <p class="modal-message" id="modal-message"></p>
+    <button class="modal-ok">OK</button>
+  </dialog>
+
+  <section id="screen-finale" class="screen">
+    <div class="finale-card">
+      <span class="finale-emoji">[done]</span>
+      <h2>That's the whole surprise</h2>
+      <p class="finale-text">
+        Hope this made you smile, Anchal. You're genuinely one of those people
+        who makes hangouts better — good vibes, good laughs, good memories.
+      </p>
+      <p class="finale-sign">— from a friend who appreciates you</p>
+      <button class="replay-btn" id="replay">Open again</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

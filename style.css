@@ -1,0 +1,308 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+.screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  max-width: 480px;
+  width: 100%;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: #666;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  text-decoration: underline;
+}
+
+.subtitle {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  max-width: 320px;
+}
+
+.gift-box {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 1rem;
+}
+
+.box-body {
+  width: 140px;
+  height: 120px;
+  background: #fff;
+  border: 2px solid #000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-lid {
+  width: 150px;
+  height: 36px;
+  background: #fff;
+  border: 2px solid #000;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease;
+  z-index: 2;
+}
+
+.gift-box.opening .box-lid {
+  transform: translateX(-50%) translateY(-50px) rotate(-20deg);
+}
+
+.ribbon-v, .ribbon-h {
+  position: absolute;
+  background: #000;
+}
+
+.ribbon-v {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ribbon-h {
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bow {
+  font-size: 1rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.tap-hint {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+#screen-unwrap h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+  width: 220px;
+  height: 4px;
+  background: #ddd;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #000;
+  animation: fillBar 2s ease forwards;
+}
+
+@keyframes fillBar {
+  to { width: 100%; }
+}
+
+#screen-cards h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-instruction {
+  color: #444;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.wish-card {
+  background: #fff;
+  border: 1px solid #000;
+  padding: 1.25rem 1rem;
+  cursor: pointer;
+  color: #000;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wish-card:hover:not(.opened) {
+  background: #f0f0f0;
+}
+
+.wish-card.opened {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.card-emoji {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card-label {
+  font-size: 0.85rem;
+}
+
+.cards-footer {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.card-modal {
+  border: 1px solid #000;
+  padding: 2rem 1.5rem;
+  max-width: 340px;
+  width: calc(100% - 2rem);
+  background: #fff;
+  color: #000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-modal::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-emoji {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.modal-message {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.modal-ok {
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.finale-card {
+  border: 1px solid #000;
+  padding: 2rem 1.5rem;
+}
+
+.finale-emoji {
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#screen-finale h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.finale-text {
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.finale-sign {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.replay-btn {
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+}
+
+.replay-btn:hover {
+  background: #f0f0f0;
+}
