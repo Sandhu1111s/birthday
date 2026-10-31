@@ -1,77 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Little Surprise</title>
+  <title>For My Kanchan 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+
+
+  <!-- SCREEN 1: Landing -->
   <section id="screen-landing" class="screen active">
-    <p class="eyebrow">psst… someone made this for you</p>
-    <h1>Hey <span class="name">Anchal</span></h1>
-    <p class="subtitle">There's a tiny surprise waiting. No pressure — just tap the box when you're ready.</p>
+    <p class="eyebrow">✨ a little something made just for you ✨</p>
+    <h1>Hey <span class="name">Kanchan</span> 💕</h1>
+    <p class="subtitle">My rasmalai, my baby kannu… there's a little surprise waiting inside just for you 🎁</p>
     <button class="gift-box" id="open-gift" aria-label="Open gift">
-      <div class="box-lid"></div>
+      <div class="box-lid">
+        <div class="bow-wrap">
+          <span class="bow-left"></span>
+          <span class="bow-right"></span>
+          <span class="bow-center">🎀</span>
+        </div>
+      </div>
       <div class="box-body">
         <span class="ribbon-v"></span>
         <span class="ribbon-h"></span>
-        <span class="bow">+</span>
+        <span class="heart-inside">💝</span>
       </div>
       <p class="tap-hint">tap to open</p>
     </button>
   </section>
 
+  <!-- SCREEN 2: Unwrapping -->
   <section id="screen-unwrap" class="screen">
-    <h2>Opening…</h2>
-    <div class="progress-bar"><div class="progress-fill"></div></div>
+    <div class="unwrap-content">
+      <div class="spin-heart">💖</div>
+      <h2>Opening your surprise…</h2>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <p class="unwrap-sub">Something beautiful is coming 🌸</p>
+    </div>
   </section>
 
+  <!-- SCREEN 3: Cards -->
   <section id="screen-cards" class="screen">
-    <h2>Pick a card</h2>
-    <p class="card-instruction">Each one has a note from a friend</p>
+    <h2>Open each heart 💌</h2>
+    <p class="card-instruction">Every card holds a little piece of how I feel about you</p>
     <div class="cards-grid">
       <button class="wish-card" data-card="1">
-        <span class="card-emoji">1</span>
-        <span class="card-label">Card 1</span>
+        <span class="card-emoji">💗</span>
+        <span class="card-label">rasmalai</span>
       </button>
       <button class="wish-card" data-card="2">
-        <span class="card-emoji">2</span>
-        <span class="card-label">Card 2</span>
+        <span class="card-emoji">🌸</span>
+        <span class="card-label">kannu</span>
       </button>
       <button class="wish-card" data-card="3">
-        <span class="card-emoji">3</span>
-        <span class="card-label">Card 3</span>
+        <span class="card-emoji">💝</span>
+        <span class="card-label">baby</span>
       </button>
       <button class="wish-card" data-card="4">
-        <span class="card-emoji">4</span>
-        <span class="card-label">Card 4</span>
+        <span class="card-emoji">🌹</span>
+        <span class="card-label">kanchan</span>
       </button>
     </div>
     <p class="cards-footer" id="cards-progress">0 / 4 opened</p>
   </section>
 
+  <!-- Card Modal -->
   <dialog id="card-modal" class="card-modal">
     <button class="modal-close" aria-label="Close">&times;</button>
     <div class="modal-emoji" id="modal-emoji"></div>
+    <p class="modal-title" id="modal-title"></p>
     <p class="modal-message" id="modal-message"></p>
-    <button class="modal-ok">OK</button>
+    <button class="modal-ok">Close with love 💕</button>
   </dialog>
 
+  <!-- SCREEN 4: Mahadev Blessing -->
+  <section id="screen-mahadev" class="screen">
+    <div class="mahadev-card">
+      <p class="mahadev-note">
+        You love Bholenath with all your heart, and I love that about you.<br><br>
+        May Mahadev always keep you safe, happy, and at peace — always. 🙏
+      </p>
+      <button class="mahadev-btn" id="mahadev-continue">continue 💖</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 5: Her Favourites -->
+  <section id="screen-food" class="screen">
+    <div class="food-card">
+      <p class="food-eyebrow">things she loves 🤍</p>
+      <h2 class="food-title">Her little favourites</h2>
+      <p class="food-sub">because knowing what makes you happy makes me happy too</p>
+      <div class="food-grid">
+        <div class="food-item">🥟 <span>Momo</span></div>
+        <div class="food-item">🍮 <span>Petha</span></div>
+        <div class="food-item">🍫 <span>Milky Bar</span></div>
+        <div class="food-item">🍫 <span>KitKat</span></div>
+        <div class="food-item">🍬 <span>Jalebi</span></div>
+      </div>
+      <button class="food-btn" id="food-continue">continue 💖</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 6: Finale -->
   <section id="screen-finale" class="screen">
     <div class="finale-card">
-      <span class="finale-emoji">[done]</span>
-      <h2>That's the whole surprise</h2>
-      <p class="finale-text">
-        Hope this made you smile, Anchal. You're genuinely one of those people
-        who makes hangouts better — good vibes, good laughs, good memories.
+      <div class="finale-hearts">
+        <span>💖</span><span>🌸</span><span>💖</span>
+      </div>
+      <h2>My Dearest Kanchan</h2>
+      <p class="first-meet">
+        📅 <strong>23rd September</strong> — the day we first met, on my birthday.<br>
+        That day changed everything for me. 🥹
       </p>
-      <p class="finale-sign">— from a friend who appreciates you</p>
-      <button class="replay-btn" id="replay">Open again</button>
+
+      <!-- Live together counter -->
+      <div class="together-box">
+        <p class="together-label">we've been together for</p>
+        <div class="together-grid">
+          <div class="together-unit">
+            <span class="together-num" id="cnt-days">0</span>
+            <span class="together-sub">days</span>
+          </div>
+          <div class="together-unit">
+            <span class="together-num" id="cnt-hours">0</span>
+            <span class="together-sub">hours</span>
+          </div>
+          <div class="together-unit">
+            <span class="together-num" id="cnt-mins">0</span>
+            <span class="together-sub">mins</span>
+          </div>
+          <div class="together-unit">
+            <span class="together-num" id="cnt-secs">0</span>
+            <span class="together-sub">secs</span>
+          </div>
+        </div>
+        <p class="together-tag">and every second has been worth it 💕</p>
+      </div>
+
+      <p class="finale-text">
+        From that very first moment, I knew you were someone incredibly special.
+        You walked into my life and everything just felt brighter, warmer, more beautiful.
+        My rasmalai, my baby kannu — I love you so much.
+        You are not just special to me, you are <em>everything</em> to me. 💕
+      </p>
+      <p class="finale-love">I love you, Kanchan. Always and forever. 🌹</p>
+      <p class="finale-sign">— Yours, always 💌</p>
+      <button class="replay-btn" id="replay">Open again 🔁</button>
     </div>
   </section>
 
   <script src="script.js"></script>
 </body>
+
 </html>
